@@ -1,17 +1,43 @@
-\begin{tikzpicture}[y=8mm,x=8mm,line width=0.5pt,line cap=round,line join=round]
+\begin{tikzpicture}[y=7.8mm,x=7.8mm,line width=0.5pt,line cap=round,line join=round]
 \footnotesize
 \begin{scope}[shift={(0.5,0.5)}]
-\node[text width=10cm] at (6,-2) {
-01,03,04,05,06,07,08
-20,26,27,28,29
-30,32,33,34,35,37,39
-41,42,43,45,46,48
-50,51,54,57,58,59
-60,61,62,63,65,66,68,69
-70,71,74,75,76,78
-80,83,85,87,88,89
-90,91,92,94,96,97,99
-};
+
+\node at (7,1) {60};\node at (3,1) {60};
+\node at (1,12) {65};\node at (0,12) {65};
+\node at (5,0) {91};\node at (0,11) {91};
+\node at (7,0) {27};\node at (10,12) {27};
+\node at (10,2) {03};\node at (4,8) {03};
+\node at (8,0) {57};\node at (0,9) {57};
+\node at (9,11) {68};\node at (9,2) {68};
+\node at (9,-1) {28};\node at (7,7) {28};
+\node at (5,8) {35};\node at (5,6) {35};
+\node at (3,6) {80};\node at (3,0) {80};
+\node at (10,4) {76};\node at (6,-1) {76};
+\node at (0,1) {39};\node at (10,10) {39};
+\node at (6,7) {62};\node at (2,1) {62};
+\node at (7,12) {41};\node at (10,-1) {41};
+\node at (0,-1) {32};\node at (5,7) {32};
+\node at (3,12) {74};\node at (2,0) {74};
+\node at (0,3) {51};\node at (1,0) {51};
+\node at (6,8) {06};\node at (0,2) {06};
+\node at (4,5) {83};\node at (1,11) {83};
+\node at (9,0) {70};\node at (3,-1) {70};
+\node at (2,-1) {34};\node at (4,6) {34};
+\node at (9,12) {08};\node at (1,2) {08};
+\node at (10,1) {85};\node at (9,1) {85};
+\node at (1,-1) {66};\node at (8,12) {66};
+\node at (8,1) {42};\node at (5,5) {42};
+\node at (7,-1) {20};\node at (0,0) {20};
+\node at (10,11) {50};\node at (10,9) {50};
+\node at (0,10) {61};\node at (4,7) {61};
+\node at (1,1) {01};\node at (6,6) {01};
+\node at (0,4) {69};\node at (3,7) {69};
+\node at (8,-1) {96};\node at (4,-1) {96};
+\node at (6,5) {94};\node at (10,3) {94};
+\node at (10,0) {07};\node at (2,12) {07};
+\node at (5,-1) {26};\node at (7,6) {26};
+
+%%%%%%%%%%%%%%% GREEN %%%%%%%%%%%%%%%%%%
 \node at (5,2) {36};\node at (6,3) {36};
 
 \node at (8,6) {49};\node at (6,11) {49};
@@ -101,8 +127,8 @@
 %    \fill[red] (\x,\y) rectangle +(1,1);
 
 \foreach \x in {0,...,11}
-    \draw (\x,0) -- +(0,13);
-\foreach \y in {0,...,13}
+    \draw (\x,-1) -- +(0,14);
+\foreach \y in {-1,...,13}
     \draw (0,\y) -- +(11,0);
 
 \end{tikzpicture}
