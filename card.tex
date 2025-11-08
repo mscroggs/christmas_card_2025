@@ -1,0 +1,179 @@
+\documentclass[10pt]{article}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{amsfonts}
+\usepackage{enumitem}
+\usepackage[math-style=ISO,bold-style=ISO,mathrm=sym]{unicode-math}
+\usepackage{pdfpages}
+\usepackage{tikz}
+\usepackage{xcolor}
+\usepackage{xfp}
+\usepackage[top=5mm, bottom=2mm, inner=5mm, outer=5mm,
+headheight=0mm, headsep=0mm, footskip=0mm,
+papersize={210mm, 148mm},
+includeheadfoot
+]{geometry}
+\newcommand{\heading}[1]{
+\begin{center}
+\setmainfont{Raleway SemiBold}[Scale=1.3]#1
+\end{center}\vspace{-7mm}}
+\newcommand{\subheading}[1]{
+\vspace{-2mm}
+\begin{flushleft}
+\setmainfont{Raleway SemiBold}[Scale=1]#1
+\end{flushleft}\vspace{-5mm}}
+
+\defaultfontfeatures{Ligatures=TeX}
+\setmainfont[BoldItalicFont=Linux Biolinum Slanted Bold]{Libertinus Sans}
+\setmathfont[NFSSFamily=mathfont,RawFeature={+ss08}]{Libertinus Math}
+\DeclareMathAlphabet{\mathcal}{OMS}{cmsy}{m}{n}
+
+% Replace 0-9 with sans serif versions
+%\DeclareSymbolFont{MathFont}{TU}{mathfont}{m}{n}
+\Umathcode "31 = "0"0"1D7E3
+\Umathcode "32 = "0"0"1D7E4
+\Umathcode "33 = "0"0"1D7E5
+\Umathcode "34 = "0"0"1D7E6
+\Umathcode "35 = "0"0"1D7E7
+\Umathcode "36 = "0"0"1D7E8
+\Umathcode "37 = "0"0"1D7E9
+\Umathcode "38 = "0"0"1D7EA
+\Umathcode "39 = "0"0"1D7EB
+\Umathcode "30 = "0"0"1D7E2
+
+
+\pagestyle{empty}
+
+\newenvironment{enumerlist}[1][5mm]{\begin{enumerate}[leftmargin=#1]
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+}{\end{enumerate}}
+\begin{document}
+\noindent\begin{minipage}[t][138mm][t]{95mm}
+\heading{Definitions}
+\vspace{3mm}
+{\footnotesize
+\begin{enumerlist}[0mm]
+\item[] The \textbf{coefficients} of a polynomial in $x$ are the constants written before each power of $x$. For example,
+        the coefficients of \(4x^2+12x+9\) are 4, 12 and 9.
+\item[] The \textbf{geometric mean} of a set of \(n\) numbers is the \(n\)th root of the product of the numbers.
+\item[] The \textbf{factors} of a number are the numbers that it can be divided by without leaving a remainder.
+        1 and the number itself are included as factors in each puzzle where factors are used.
+\item[] The \textbf{consecutive integers} starting at 500 are the numbers 500, 501, 502, \dots{}
+\end{enumerlist}
+}
+
+\vspace{4mm}
+
+\heading{Hints}
+\vspace{3mm}
+{\footnotesize
+\begin{enumerlist}[10mm]
+\item[1.] There are 12 different ways that you could make the two 2-digit numbers.
+\item[2.] What should the leftmost digit of each number be? Once you've picked a 2-digit number, how should you arrange the digits in the 8-digit number?
+\item[3.] \((30x+5)^2 = 900x^2+300x+25\)
+\item[4.] How could you do the previous question without expanding the brackets?
+\item[5.] The factors of 41306329 are 1, 6427, and 41306329.
+\item[6.] What are the geometric means of the factors of the numbers from 1 to 20?
+\item[7.] What are the factors of 7? What are the factors of $7^2$? $7^3$?
+\item[8.] Which numbers between 1 and 20 have an odd number of factors?
+\item[9.] What would the result be if Eve had used 3 consecutive integers? 4? 5?
+\item[10.] If you change the 500 in question 9 for a different number, how do you need to change the 365 to keep the answer the same?
+\end{enumerlist}
+}
+
+%\heading{Solutions}
+%\vspace{3mm}
+%{\footnotesize
+%
+%}
+\vfill
+\begin{center}\footnotesize
+\includegraphics[width=.14\textwidth]{scorpion.png}
+\\
+\includegraphics[width=.75\textwidth]{logo.jpg}
+\\
+\begin{minipage}{3.5cm}
+chalkdustmagazine.com
+\\
+@chalkdustmag
+\\
+\#ChalkdustChristmasCard2025
+\end{minipage}
+\end{center}
+\end{minipage}\hspace{10mm}\begin{minipage}[t][138mm][t]{95mm}
+\vspace*{-1mm}
+
+\begin{center}
+\input{drawing.tex}
+\end{center}
+
+\vfill
+\begin{center}
+{\setmainfont[Scale=3]{Pacifico}Merry Christmas}\\
+{(instructions inside)}
+\end{center}
+\vfill\null
+\end{minipage}
+
+\newpage
+
+\noindent\begin{minipage}[t][138mm][t]{95mm}
+\heading{Instructions}
+\vspace{3mm}
+{\footnotesize
+\begin{enumerlist}
+\item Solve the puzzles below.
+\item Each answer will have an even number of digits. Form a sequence of numbers by splitting the answer into pairs of digits, then join the dots on the front
+      of the card following the sequence. For example, if the answer to a puzzle were 77031827, you would draw straight lines
+      from dot 77 to dot 3, from dot 3 to dot 18, and from dot 18 to dot 27.
+\item Colour any region containing an even number of unused dots green. Colour any region containing an odd number of unused dots red or blue.
+\end{enumerlist}}
+
+\vspace{5mm}
+
+\heading{Puzzles}
+{\footnotesize
+\begin{center}\footnotesize(see back of card for definitions and hints)\end{center}\vspace{-3mm}
+%1. 13 12
+%2. 84 04 14 81 60
+%3. 12 25
+%4. 17 71 47
+%5. 64 27
+%6. 84 64
+%7. 28 01
+%8. 17 02 60
+%9. 13 32 25
+%10. 47 27
+\begin{enumerlist}
+\item[1.] What is the largest number you can make by using the digits 1 to 4 to make
+          two 2-digit numbers, then mutiplying the two numbers together?
+\item[2.] What is the largest number you can make by using the digits 0 to 9 to make
+          a 2-digit number and a 8-digit number, then mutiplying the two numbers together?
+\item[3.] The expansion of \((2x+3)^2\) is \(4x^2+12x+9\). The sum of the coefficients of
+          \(4x^2+12x+9\) is 25. What is the sum of the coefficients of the expansion of \((30x+5)^2\)?
+\item[4.] What is the sum of the coefficients of the expansion of \((2x+1)^{11}\)?
+\item[5.] What is the geometric mean of all the factors of 41306329?
+\item[6.] What is the largest number for which the geometric mean of all its factors is 92?
+\item[7.] What is the sum of all the factors of \(7^4\)?
+\item[8.] How many numbers between 1 and 28988500000 have an odd number of factors?
+\item[9.] Eve found the total of the 365 consecutive integers starting at 500 and the total of the next 365 consecutive integers,
+          then subtracted the smaller total from the larger total. What was her result?
+\item[10.] Eve found the total of the \(n\) consecutive integers starting at a number and the total of the next \(n\) consecutive
+           integers, then subtracted the smaller total from the larger total. Her result was 22344529.
+           What is the largest possible value of \(n\) that she could have used?
+\end{enumerlist}
+}
+\end{minipage}\hspace{10mm}\begin{minipage}[t][138mm][t]{95mm}
+\vfill
+\begin{center}
+{\setmainfont[Scale=3]{Pacifico}Merry Christmas}\\
+\end{center}
+\vfill
+\begin{center}\input{footer.tex}\end{center}
+\vspace{1mm}
+\end{minipage}
+
+
+\end{document}
+
