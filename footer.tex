@@ -1,23 +1,62 @@
 
 \begin{tikzpicture}[x=7mm,y=7mm,line cap=round,line join=round,line width=1pt]
-\foreach \n in {3,...,8} {
-\begin{scope}[shift={(2.2*\n,0)}]
-\draw (0,0) circle (0.1);
-\foreach \i in {1,...,\n} {
-    \begin{scope}[rotate=360*\i/\n]
-        \draw (0.1,0) -- (0.9,0);
-
-        \foreach \a in {1, 2, 3, 4}
-        \draw
-            (0.2*\a,0) -- +({(5/4-\a/4)*(0.5*cos(180/\n)-0.2)},{(5/4-\a/4)*0.5*sin(180/\n)})
-            (0.2*\a,0) -- +({(5/4-\a/4)*(0.5*cos(180/\n)-0.2)},{-(5/4-\a/4)*0.5*sin(180/\n)});
-        %\foreach \a in {1, 2, 3, 4}
-        %\draw
-        %    (0.03+0.15*\a,0) -- +({0.05*(5-\a)},{0.05*(5-\a)})
-        %    (0.03+0.15*\a,0) -- +({0.05*(5-\a)},{-0.05*(5-\a)});
-    \end{scope}
-
+\newcommand{\pot}{
+\draw
+    (-0.1,0) -- +(0,-0.2)
+    (0.1,0) -- +(0,-0.2)
+    (-0.25,-0.2) -- (0.25,-0.2) -- (0.2,-0.5) -- (-0.2,-0.5) -- cycle
+;
 }
+\newcommand{\sone}{
+    \draw (-0.9,0) -- (-0.4,0.6) -- (-0.7,0.6) -- (-0.2,1.2) -- (-0.5,1.2) --
+          (0,1.8) -- (0.5,1.2) -- (0.2,1.2) -- (0.7,0.6) -- (0.4,0.6) -- (0.9,0) -- cycle;
+}
+\begin{scope}
+\sone\pot
 \end{scope}
+
+\newcommand{\stwo}{
+\foreach \x/\y in {-0.45/0,0.45/0,0/0.9} {
+    \begin{scope}[shift={(\x,\y)},scale=0.5]
+        \sone
+    \end{scope}
 }
+}
+\begin{scope}[shift={(2.5,0)}]
+\stwo\pot
+\end{scope}
+
+\newcommand{\sthree}{
+\foreach \x/\y in {-0.45/0,0.45/0,0/0.9} {
+    \begin{scope}[shift={(\x,\y)},scale=0.5]
+        \stwo
+    \end{scope}
+}
+}
+\begin{scope}[shift={(5,0)}]
+\sthree\pot
+\end{scope}
+
+\newcommand{\sfour}{
+\foreach \x/\y in {-0.45/0,0.45/0,0/0.9} {
+    \begin{scope}[shift={(\x,\y)},scale=0.5]
+        \sthree
+    \end{scope}
+}
+}
+\begin{scope}[shift={(7.5,0)}]
+\sfour\pot
+\end{scope}
+
+\newcommand{\sfive}{
+\foreach \x/\y in {-0.45/0,0.45/0,0/0.9} {
+    \begin{scope}[shift={(\x,\y)},scale=0.5]
+        \sfour
+    \end{scope}
+}
+}
+\begin{scope}[shift={(10,0)}]
+\sfive\pot
+\end{scope}
+
 \end{tikzpicture}
